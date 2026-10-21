@@ -1,0 +1,16 @@
+# Test screenshots and temporary audit media
+scripts/*.png
+preview_*.png
+shot_*.png
+rwd_*.png
+audit_*.png
+section_*.png
+*.png.bak
+ocr_texts.json
+catalog_check.json
+edge-*-profile/
+edge-*-test/
+
+# OS and Editor
+.DS_Store
+Thumbs.db

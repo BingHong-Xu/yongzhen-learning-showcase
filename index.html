@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>永貞國小學習成果展 ｜ 學生展能 × 永續校園 × 活力成長</title>
+  <meta name="description" content="苗栗縣頭份市永貞國民小學學生學習成果展，涵蓋樂樂棒球錦標賽全縣雙亞軍、校慶運動大會拔河冠軍、英語多元展能、萬聖節雙語活動、多肉公益愛心市集與畢業太空啟航等全人教育成果。" />
+  <meta name="theme-color" content="#0b192c" />
+
+  <!-- Open Graph / Facebook / LINE / Google Sites Link Cards -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://binghong-xu.github.io/yongzhen-learning-showcase/" />
+  <meta property="og:title" content="永貞國小學習成果展 ｜ 六年甲班全人展能誌" />
+  <meta property="og:description" content="苗栗縣頭份市永貞國小學生學習成果展：全縣樂樂棒球錦標賽雙亞軍、校慶運動會拔河雙料冠軍、SDGs永續素養與跨領域創新成果。" />
+  <meta property="og:image" content="assets/images/2025%E5%B9%B411%E6%9C%8815%E6%97%A5-%E8%8B%97%E6%A0%97%E6%B0%B8%E8%B2%9E%E5%9C%8B%E5%B0%8F%E5%8D%85%E4%B9%9D%E9%80%B1%E5%B9%B4%E6%A0%A1%E6%85%B6%E9%81%8B%E5%8B%95%E5%A4%A7%E6%9C%83/2025%E5%B9%B411%E6%9C%8815%E6%97%A5-28-%E8%8B%97%E6%A0%97%E6%B0%B8%E8%B2%9E%E5%9C%8B%E5%B0%8F%E5%8D%85%E4%B9%9D%E9%80%B1%E5%B9%B4%E6%A0%A1%E6%85%B6%E9%81%8B%E5%8B%95%E5%A4%A7%E6%9C%83-%E7%8F%AD%E7%B4%9A%E5%A4%A7%E5%BD%88%E5%BD%B1.png" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- =========================================================================
+       Site Header
+       ========================================================================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-inner">
+      <div class="brand">
+        <div class="brand-icon">🌱</div>
+        <div class="brand-text">
+          <h1>
+            永貞國小學習成果展
+            <span class="badge-class">六年甲班全人展能</span>
+          </h1>
+          <p>SDGs 永續素養 × 跨領域創新 × 團隊堅毅</p>
+        </div>
+      </div>
+
+      <!-- Quick Nav Links -->
+      <nav class="nav-links">
+        <a href="#trophySpotlight" class="nav-link">🏆 榮譽金盃</a>
+        <a href="#exhibitionSection" class="nav-link">🏛️ 15大展區</a>
+        <a href="#sdgsMatrixSection" class="nav-link">🌍 SDGs矩陣</a>
+        <a href="#" class="nav-link" id="navTimelineLink">⏱️ 成長軌跡</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn-pill btn-pill-fullscreen" id="openFullscreenBtn" title="在新分頁開啟全螢幕獨立展頁" aria-label="在新分頁開啟全螢幕" style="display: none;">
+          <span>↗ 全螢幕</span>
+        </button>
+        <button class="btn-pill btn-pill-pii open-pii-modal" title="點擊查閱個資脫敏安全檢驗報告" aria-label="100%個資脫敏認證">
+          <span class="shield-icon">🛡️</span>
+          <span class="pii-btn-text">100% 個資脫敏認證</span>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="切換導航選單" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true">
+      <div class="mobile-nav-inner">
+        <div class="mobile-nav-links">
+          <a href="#trophySpotlight" class="mobile-nav-link">
+            <span class="nav-icon">🏆</span>
+            <div class="nav-link-text">
+              <span class="main-title">全縣體育榮譽金盃</span>
+              <span class="sub-title">拔河雙冠・樂樂棒全縣雙亞軍</span>
+            </div>
+          </a>
+          <a href="#exhibitionSection" class="mobile-nav-link">
+            <span class="nav-icon">🏛️</span>
+            <div class="nav-link-text">
+              <span class="main-title">15 大學習成果展區</span>
+              <span class="sub-title">113 張真實高畫質紀實照片</span>
+            </div>
+          </a>
+          <a href="#sdgsMatrixSection" class="mobile-nav-link">
+            <span class="nav-icon">🌍</span>
+            <div class="nav-link-text">
+              <span class="main-title">SDGs 永續指標矩陣</span>
+              <span class="sub-title">深度對接 6 大聯合國目標</span>
+            </div>
+          </a>
+          <a href="#" class="mobile-nav-link" id="mobileNavTimelineLink">
+            <span class="nav-icon">⏱️</span>
+            <div class="nav-link-text">
+              <span class="main-title">六年成長軌跡時光軸</span>
+              <span class="sub-title">2020～2026 年學習里程碑</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="mobile-nav-divider"></div>
+
+        <div class="mobile-nav-categories">
+          <div class="mobile-nav-subtitle">快速切換主題展區</div>
+          <div class="mobile-cat-chips">
+            <button class="mobile-cat-chip active" data-cat="all">🌟 全部 (15)</button>
+            <button class="mobile-cat-chip" data-cat="sports">🏃 體育 (5)</button>
+            <button class="mobile-cat-chip" data-cat="bilingual">🎭 雙語 (4)</button>
+            <button class="mobile-cat-chip" data-cat="sdgs">🌱 永續 (3)</button>
+            <button class="mobile-cat-chip" data-cat="graduation">🎓 在地 (3)</button>
+          </div>
+        </div>
+
+        <div class="mobile-nav-footer">
+          <button class="btn-pill btn-pill-pii open-pii-modal mobile-pii-full-btn">
+            <span class="shield-icon">🛡️</span>
+            <span>檢視個資保護合規聲明 (零電話 / 零Email)</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       Hero Section
+       ========================================================================= -->
+  <section class="hero-section">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="hero-grid-pattern"></div>
+    </div>
+
+    <div class="container hero-content">
+      <div class="hero-tag">
+        <span class="sparkle">✨</span>
+        <span>苗栗縣頭份市永貞國民小學 • 114-115 學年度</span>
+        <span class="dot">•</span>
+        <span>學生多元展能與校園活動成果誌</span>
+      </div>
+
+      <h2 class="hero-title">
+        扎根在地・跨域展能<br />
+        培育<span class="highlight">身心韌性與永續宏觀</span>的未來公民
+      </h2>
+
+      <p class="hero-subtitle">
+        從樂樂棒球場上的汗水拼搏、拔河繩索上的心手相連，到多肉微型循環教室的綠色愛心市集；<br class="desktop-only" />
+        記錄永貞學子在每一個日常與挑戰中，綻放自信、體現利他、勇敢探索世界的真實足跡。
+      </p>
+
+      <!-- Quick Action Buttons -->
+      <div class="hero-actions">
+        <a href="#exhibitionSection" class="btn-hero btn-hero-primary">
+          <span>✨ 開始探索 15 大展區</span>
+          <span class="arrow">↓</span>
+        </a>
+        <a href="#trophySpotlight" class="btn-hero btn-hero-glass">
+          <span>🏆 觀看全縣榮譽金盃</span>
+        </a>
+        <a href="#sdgsMatrixSection" class="btn-hero btn-hero-glass">
+          <span>🌍 SDGs 永續指標對接</span>
+        </a>
+      </div>
+
+      <!-- Stats Bar with Glass Cards -->
+      <div class="stats-bar">
+        <div class="stat-card">
+          <div class="stat-icon-wrapper sports-glow">🏆</div>
+          <div class="stat-content">
+            <div class="stat-number">
+              <span class="counter-val" data-target="4">0</span>
+              <span class="accent">座</span>
+            </div>
+            <div class="stat-label">全縣與校慶冠軍亞軍</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon-wrapper photos-glow">📸</div>
+          <div class="stat-content">
+            <div class="stat-number">
+              <span class="counter-val" data-target="113">0</span>
+              <span class="accent">張</span>
+            </div>
+            <div class="stat-label">真實學習活動紀實照片</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon-wrapper themes-glow">🌱</div>
+          <div class="stat-content">
+            <div class="stat-number">
+              <span class="counter-val" data-target="15">0</span>
+              <span class="accent">+</span>
+            </div>
+            <div class="stat-label">大展能主題專區全景</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon-wrapper family-glow">🤝</div>
+          <div class="stat-content">
+            <div class="stat-number">
+              <span class="counter-val" data-target="95">0</span>
+              <span class="accent">%+</span>
+            </div>
+            <div class="stat-label">親師座談家長出席率</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Curved Divider -->
+    <div class="hero-curve">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0 C150,90 350,-40 500,60 C650,160 900,10 1200,40 L1200,120 L0,120 Z" class="shape-fill"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       NEW: Trophy Spotlight Gallery (榮譽金盃聚光燈)
+       ========================================================================= -->
+  <section class="trophy-spotlight-section" id="trophySpotlight">
+    <div class="container">
+      <div class="spotlight-header">
+        <div class="spotlight-title-group">
+          <span class="spotlight-tag">🌟 體育競技與團隊榮耀里程碑</span>
+          <h3 class="spotlight-title">全縣體育榮譽金盃・熱血拔河雙冠殿堂</h3>
+        </div>
+        <p class="spotlight-desc">
+          身著「SDGs 輪環」專屬戰袍，學生們在全縣樂樂棒球賽與校慶運動會上，展現頑強拼搏、團隊默契與挫折容忍力，締造雙亞軍與校慶雙冠璀璨紀錄！
+        </p>
+      </div>
+
+      <div class="trophy-cards-grid">
+        <!-- Trophy 1 -->
+        <div class="trophy-card gold-border" data-act-id="anniversary-39">
+          <div class="trophy-badge gold-bg">🥇 全校冠軍</div>
+          <div class="trophy-icon">🏆</div>
+          <h4>第卅九週年校慶拔河大賽</h4>
+          <p class="trophy-sub">拔河比賽【全校冠軍】・趣味競賽【全校冠軍】・接力【亞軍】</p>
+          <div class="trophy-meta">
+            <span>📅 2025年11月15日</span>
+            <span class="trophy-action">點擊查閱紀實 →</span>
+          </div>
+        </div>
+
+        <!-- Trophy 2 -->
+        <div class="trophy-card silver-border" data-act-id="county-cup-runner-up-may8">
+          <div class="trophy-badge silver-bg">🥈 全縣亞軍</div>
+          <div class="trophy-icon">⚾</div>
+          <h4>苗栗縣縣長盃樂樂棒錦標賽</h4>
+          <p class="trophy-sub">全縣第二名【亞軍】・薪火相傳跨屆傳承・兩亞兩季傳奇戰史</p>
+          <div class="trophy-meta">
+            <span>📅 2025年5月8日</span>
+            <span class="trophy-action">點擊查閱紀實 →</span>
+          </div>
+        </div>
+
+        <!-- Trophy 3 -->
+        <div class="trophy-card silver-border" data-act-id="board-president-cup-runner-up">
+          <div class="trophy-badge silver-bg">🥈 全縣亞軍</div>
+          <div class="trophy-icon">⚾</div>
+          <h4>苗栗縣理事長盃樂樂棒錦標賽</h4>
+          <p class="trophy-sub">六年級分組【全縣亞軍】・照南國中壘球場12強高張力激戰</p>
+          <div class="trophy-meta">
+            <span>📅 2025年10月15日</span>
+            <span class="trophy-action">點擊查閱紀實 →</span>
+          </div>
+        </div>
+
+        <!-- Trophy 4 -->
+        <div class="trophy-card bronze-border" data-act-id="county-cup-third-may9">
+          <div class="trophy-badge bronze-bg">🥉 全縣季軍</div>
+          <div class="trophy-icon">⚾</div>
+          <h4>苗栗縣114年縣長盃樂樂棒</h4>
+          <p class="trophy-sub">突破重圍勇奪【全縣季軍】・逆境奮戰挺進搶二決賽</p>
+          <div class="trophy-meta">
+            <span>📅 2025年5月9日</span>
+            <span class="trophy-action">點擊查閱紀實 →</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       Toolbar: Filter, Search, and View Switcher
+       ========================================================================= -->
+  <section class="toolbar-section" id="filterToolbar">
+    <div class="container toolbar-inner">
+      <!-- Filter Tabs with Color Coding -->
+      <div class="filter-group">
+        <button class="filter-btn active cat-btn-all" data-cat="all">
+          <span class="tab-icon">🌟</span>
+          <span>全部展區</span>
+          <span class="count-badge">15</span>
+        </button>
+        <button class="filter-btn cat-btn-sports" data-cat="sports">
+          <span class="tab-icon">🏃‍♂️</span>
+          <span>體育競技與團隊合作</span>
+          <span class="count-badge">5</span>
+        </button>
+        <button class="filter-btn cat-btn-bilingual" data-cat="bilingual">
+          <span class="tab-icon">🌍</span>
+          <span>雙語跨域與美感文化</span>
+          <span class="count-badge">5</span>
+        </button>
+        <button class="filter-btn cat-btn-sdgs" data-cat="sdgs">
+          <span class="tab-icon">🌱</span>
+          <span>永續實踐與公益展能</span>
+          <span class="count-badge">3</span>
+        </button>
+        <button class="filter-btn cat-btn-graduation" data-cat="graduation">
+          <span class="tab-icon">🎓</span>
+          <span>親師共善與感恩傳承</span>
+          <span class="count-badge">5</span>
+        </button>
+      </div>
+
+      <!-- Search and View Modes -->
+      <div class="search-and-view">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="searchInput" placeholder="搜尋活動、樂樂棒、拔河、多肉..." />
+          <span class="clear-search-btn" id="clearSearchBtn">✕</span>
+        </div>
+
+        <div class="view-toggle-group">
+          <button class="view-btn active" data-view="cards" title="策展卡片模式">
+            <span>🖼️ 卡片</span>
+          </button>
+          <button class="view-btn" data-view="timeline" title="成長時光軸模式">
+            <span>⏱️ 時光軸</span>
+          </button>
+          <button class="view-btn" data-view="gallery" title="113張相片牆">
+            <span>📸 相片牆</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       Main Exhibition Grid / View
+       ========================================================================= -->
+  <main class="container exhibition-section" id="exhibitionSection">
+    <div class="results-meta">
+      <div id="resultsCount">載入成果展區中...</div>
+      <div class="meta-tip">
+        <span>💡 點選任一相片縮圖可立即放大預覽與全螢幕播放</span>
+      </div>
+    </div>
+
+    <!-- Dynamic Container -->
+    <div id="activitiesContainer" class="activities-grid"></div>
+  </main>
+
+  <!-- =========================================================================
+       SDGs & Educational Competencies Matrix
+       ========================================================================= -->
+  <section class="sdgs-matrix-section" id="sdgsMatrixSection">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">UN SDGs × 108課綱核心素養</span>
+        <h3 class="section-title">聯合國永續發展目標多元實踐矩陣</h3>
+        <p class="section-desc">
+          本校六年甲班學生展能與校園活動並非單一活動，而是系統化對接 7 項聯合國永續發展目標（SDGs）之全人素養實踐網絡。<br />
+          點擊任一指標卡片，可立即篩選並查看該領域之教學成果與活動紀實。
+        </p>
+      </div>
+
+      <div class="sdgs-cards-grid">
+        <!-- SDG 3 -->
+        <div class="sdg-matrix-card" data-sdg="3">
+          <div class="sdg-top-accent" style="background-color: #4c9f38;"></div>
+          <div class="sdg-header">
+            <div class="sdg-number-badge" style="background-color: #4c9f38;">03</div>
+            <div class="sdg-title-text">
+              <h4>良好健康與福祉</h4>
+              <span>Good Health and Well-being</span>
+            </div>
+          </div>
+          <ul class="sdg-links-list">
+            <li>全縣縣長盃樂樂棒球錦標賽全縣亞軍、季軍</li>
+            <li>全縣體育會理事長盃六年級分組亞軍</li>
+            <li>校慶運動大會全校拔河大賽冠軍、接力亞軍</li>
+            <li>身心韌性鍛鍊與健康活力的運動家習慣培育</li>
+          </ul>
+          <div class="sdg-click-hint">點擊篩選 SDG 3 相關成果 →</div>
+        </div>
+
+        <!-- SDG 4 -->
+        <div class="sdg-matrix-card" data-sdg="4">
+          <div class="sdg-top-accent" style="background-color: #c5192d;"></div>
+          <div class="sdg-header">
+            <div class="sdg-number-badge" style="background-color: #c5192d;">04</div>
+            <div class="sdg-title-text">
+              <h4>優質教育</h4>
+              <span>Quality Education</span>
+            </div>
+          </div>
+          <ul class="sdg-links-list">
+            <li>忠實呈現生生用平板自主適性學習課堂觀課</li>
+            <li>英語多元展能：英文歌唱與節奏舞蹈舞台展演</li>
+            <li>閱讀經典《論語》品德深耕與敬師戲劇創作</li>
+            <li>海寶國小跨校國際營隊國際議題探究學習</li>
+          </ul>
+          <div class="sdg-click-hint">點擊篩選 SDG 4 相關成果 →</div>
+        </div>
+
+        <!-- SDG 10 -->
+        <div class="sdg-matrix-card" data-sdg="10">
+          <div class="sdg-top-accent" style="background-color: #dd1367;"></div>
+          <div class="sdg-header">
+            <div class="sdg-number-badge" style="background-color: #dd1367;">10</div>
+            <div class="sdg-title-text">
+              <h4>減少不平等</h4>
+              <span>Reduced Inequalities</span>
+            </div>
+          </div>
+          <ul class="sdg-links-list">
+            <li>萬聖節跨文化雙語沉浸活動（包容多元族群差異）</li>
+            <li>秉持 Leave No One Behind（不遺漏任何一人）理念</li>
+            <li>正向支持系統協助體能與學科弱勢學童重拾自信</li>
+          </ul>
+          <div class="sdg-click-hint">點擊篩選 SDG 10 相關成果 →</div>
+        </div>
+
+        <!-- SDG 11 -->
+        <div class="sdg-matrix-card" data-sdg="11">
+          <div class="sdg-top-accent" style="background-color: #fd9d24;"></div>
+          <div class="sdg-header">
+            <div class="sdg-number-badge" style="background-color: #fd9d24;">11</div>
+            <div class="sdg-title-text">
+              <h4>永續城鄉與社區</h4>
+              <span>Sustainable Cities & Communities</span>
+            </div>
+          </div>
+          <ul class="sdg-links-list">
+            <li>苗北藝術節朱宗慶打擊樂團擊樂劇場《泥巴》走讀</li>
+            <li>校園國際教育世界地圖圓柱壁貼環境營造</li>
+            <li>社區里長與仕紳走入校園共創友善安全社區圈</li>
+          </ul>
+          <div class="sdg-click-hint">點擊篩選 SDG 11 相關成果 →</div>
+        </div>
+
+        <!-- SDG 12 -->
+        <div class="sdg-matrix-card" data-sdg="12">
+          <div class="sdg-top-accent" style="background-color: #bf8b2e;"></div>
+          <div class="sdg-header">
+            <div class="sdg-number-badge" style="background-color: #bf8b2e;">12</div>
+            <div class="sdg-title-text">
+              <h4>責任消費與生產</h4>
+              <span>Responsible Consumption</span>
+            </div>
+          </div>
+          <ul class="sdg-links-list">
+            <li>校慶多肉微型循環微型市集義賣（零廢棄與盆器手作）</li>
+            <li>園遊會定價、成本與利潤微型創業行銷企劃</li>
+            <li>親師座談會宣導生活減塑與家庭精細資源回收</li>
+          </ul>
+          <div class="sdg-click-hint">點擊篩選 SDG 12 相關成果 →</div>
+        </div>
+
+        <!-- SDG 17 -->
+        <div class="sdg-matrix-card" data-sdg="17">
+          <div class="sdg-top-accent" style="background-color: #19486a;"></div>
+          <div class="sdg-header">
+            <div class="sdg-number-badge" style="background-color: #19486a;">17</div>
+            <div class="sdg-title-text">
+              <h4>多元夥伴關係</h4>
+              <span>Partnerships for the Goals</span>
+            </div>
+          </div>
+          <ul class="sdg-links-list">
+            <li>親師座談會與校慶家長出席率超過 95% 高度共善</li>
+            <li>苗栗縣國際教育中心與資優中心跨單位營隊合作</li>
+            <li>多肉義賣所得捐贈慈善協會受飢兒落實公民利他</li>
+          </ul>
+          <div class="sdg-click-hint">點擊篩選 SDG 17 相關成果 →</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       Full Activity Detail Modal
+       ========================================================================= -->
+  <div class="modal-overlay" id="activityModal" role="dialog" aria-modal="true">
+    <div class="modal-window">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="關閉彈窗">✕</button>
+      
+      <!-- Modal Hero Cover -->
+      <div class="modal-hero">
+        <img id="modalCoverImg" src="" alt="封面照片" />
+        <div class="modal-hero-gradient"></div>
+        <div class="modal-hero-info">
+          <div class="modal-hero-tags">
+            <span class="btn-pill btn-pill-pii" id="modalCategoryTag" style="font-size: 0.75rem;">分類標籤</span>
+            <span class="btn-pill btn-pill-subtle" id="modalDateTag" style="font-size: 0.75rem;">活動日期</span>
+          </div>
+          <h2 class="modal-hero-title" id="modalTitle">活動名稱</h2>
+          <p class="modal-hero-subtitle" id="modalSubtitle">活動副標題</p>
+        </div>
+      </div>
+
+      <!-- Modal Content Body -->
+      <div class="modal-body">
+        <div class="modal-grid-layout">
+          <!-- Main Narrative Column -->
+          <div class="modal-main-col">
+            <h3 class="modal-section-title">
+              <span>📖</span> 活動歷程與學習展能深耕
+            </h3>
+            <p class="modal-narrative" id="modalNarrative">詳細論述內文...</p>
+
+            <!-- Teacher Authentic Quote -->
+            <div class="quote-box">
+              <div class="quote-mark">“</div>
+              <p id="modalTeacherQuote">「教師省思與真實心法引言...」</p>
+              <div class="quote-author">—— 導師課堂紀實與省思筆記</div>
+            </div>
+
+            <!-- Key Highlights -->
+            <h3 class="modal-section-title" style="margin-top: 24px;">
+              <span>🌟</span> 學生核心素養與學習成效展現
+            </h3>
+            <ul class="highlights-list" id="modalHighlightsList"></ul>
+
+            <!-- Photo Gallery Strip -->
+            <div class="modal-gallery-title">
+              <h3 class="modal-section-title" style="margin-bottom: 0;">
+                <span>📸</span> 現場影像紀實
+              </h3>
+              <span id="modalPhotoCount" style="font-size: 0.85rem; color: #64748b;"></span>
+            </div>
+            <div class="modal-photos-grid" id="modalPhotosGrid"></div>
+          </div>
+
+          <!-- Sidebar Information Column -->
+          <div class="modal-sidebar">
+            <!-- Badge / Honor Card -->
+            <div class="info-card">
+              <h4>🏆 重要榮譽與肯定</h4>
+              <div style="font-size: 0.88rem; font-weight: 800; color: #1e3a8a; margin-bottom: 10px;" id="modalBadge"></div>
+              <div class="honors-pills" id="modalHonorsList"></div>
+            </div>
+
+            <!-- SDGs Alignment Card -->
+            <div class="info-card">
+              <h4>🌍 聯合國 SDGs 永續對接</h4>
+              <div class="sdgs-vertical-list" id="modalSdgsList"></div>
+            </div>
+
+            <!-- Core Competencies Card -->
+            <div class="info-card">
+              <h4>🎯 108課綱核心素養</h4>
+              <div id="modalCompetenciesList" style="display: flex; flex-wrap: wrap; gap: 6px;"></div>
+            </div>
+
+            <!-- PII Safety Tag -->
+            <div class="info-card pii-safe-box">
+              <h4 style="color: #166534; display: flex; align-items: center; gap: 6px;">
+                <span>🛡️</span> 個資安全保證
+              </h4>
+              <p style="font-size: 0.82rem; color: #15803d; line-height: 1.55;">
+                本展區展示照片與文宣均經嚴格檢核，絕無揭露任何學生或家長之行動電話、私人電話或個人電子郵件。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       Full-Screen Lightbox Modal (Single Photo Zoom & Carousel)
+       ========================================================================= -->
+  <div class="lightbox-overlay" id="lightboxModal" role="dialog" aria-modal="true">
+    <div class="lightbox-topbar">
+      <div class="lightbox-counter" id="lightboxCounter">第 1 / 10 張</div>
+      <div class="lightbox-actions">
+        <button class="lightbox-btn" id="lightboxZoomBtn" title="縮放相片">🔍</button>
+        <button class="lightbox-btn" id="lightboxCloseBtn" title="關閉預覽 (Esc)">✕</button>
+      </div>
+    </div>
+
+    <div class="lightbox-main">
+      <button class="lightbox-nav-btn prev" id="lightboxPrevBtn" title="上一張 (方向鍵左)">‹</button>
+      <div class="lightbox-img-wrapper" id="lightboxImgWrapper">
+        <img class="lightbox-img" id="lightboxImg" src="" alt="高解析相片預覽" />
+      </div>
+      <button class="lightbox-nav-btn next" id="lightboxNextBtn" title="下一張 (方向鍵右)">›</button>
+    </div>
+
+    <div class="lightbox-bottombar">
+      <div class="lightbox-caption" id="lightboxCaption">相片說明標題</div>
+      <div class="lightbox-strip" id="lightboxStrip"></div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       PII Compliance & Privacy Protection Modal
+       ========================================================================= -->
+  <div class="modal-overlay" id="piiModal" role="dialog" aria-modal="true">
+    <div class="modal-window" style="max-width: 650px;">
+      <button class="modal-close-btn" id="piiModalCloseBtn" aria-label="關閉">✕</button>
+      <div class="pii-modal-content">
+        <h3><span>🛡️</span> 成果展個資保護與隱私合規聲明</h3>
+        <p style="font-size: 0.95rem; color: #475569; line-height: 1.7; margin-top: 8px;">
+          本「永貞國小學習成果展」網頁係依據使用者需求，針對「05_學生展能與校園活動」之原始雲端檔案進行系統化脫敏與個資保護工程，嚴格遵循中華民國《個人資料保護法》及教育部校園隱私安全準則。
+        </p>
+
+        <ul class="pii-checklist">
+          <li>
+            <span class="pii-check-icon">✔</span>
+            <div>
+              <b>全面移除手機與個人電話資訊：</b>
+              <div style="color: #64748b; font-size: 0.85rem;">全站 113 張相片、社群貼文截圖及活動海報經光學字元辨識（OCR）與人工雙重篩檢，確保絕無外洩任何學生、教師或家長之行動電話（09xx-xxx-xxx）與私人住家電話。</div>
+            </div>
+          </li>
+          <li>
+            <span class="pii-check-icon">✔</span>
+            <div>
+              <b>全面移除個人電子郵件（Email）：</b>
+              <div style="color: #64748b; font-size: 0.85rem;">徹底過濾排除所有個人電子信箱地址，杜絕未授權的聯絡資訊暴露與垃圾郵件騷擾風險。</div>
+            </div>
+          </li>
+          <li>
+            <span class="pii-check-icon">✔</span>
+            <div>
+              <b>校園學習歷程正向公開合法性：</b>
+              <div style="color: #64748b; font-size: 0.85rem;">展示內容皆為公開校園活動、全縣體育競賽捧盃榮耀、公開觀課與畢業典禮等正向全人教育紀錄，旨在表彰學童成長與推廣優質永續教育。</div>
+            </div>
+          </li>
+          <li>
+            <span class="pii-check-icon">✔</span>
+            <div>
+              <b>本機安全封裝與無外傳風險：</b>
+              <div style="color: #64748b; font-size: 0.85rem;">本專案影像檔案已妥善封裝於本機專案目錄下，不依賴任何外部不安全第三方向量追蹤服務。</div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="pii-modal-footer">
+          <button class="btn-pill btn-pill-pii btn-pii-dismiss" onclick="document.getElementById('piiModal').classList.remove('open'); document.body.style.overflow='';">
+            我已瞭解，關閉聲明
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       Site Footer
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <h3>苗栗縣頭份市永貞國民小學</h3>
+        <p>
+          「永續教育成於生命覺察，優質教育始於不落一人（Leave No One Behind）。」<br />
+          立足 SDG 4 優質教育，創發跨領域校本特色課程，培育兼具全球視野、社會同理與環境行動力之永續世界公民。
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>策展成果主題</h4>
+        <ul class="footer-links">
+          <li><a href="#trophySpotlight">體育競技與團隊合作（全縣雙亞軍）</a></li>
+          <li><a href="#" onclick="document.querySelector('[data-cat=bilingual]').click(); return false;">雙語跨域與美感文化（英語展能）</a></li>
+          <li><a href="#" onclick="document.querySelector('[data-cat=sdgs]').click(); return false;">永續實踐與公益展能（多肉義賣）</a></li>
+          <li><a href="#" onclick="document.querySelector('[data-cat=graduation]').click(); return false;">親師共善與感恩傳承（畢業典禮）</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>校園資訊與隱私</h4>
+        <ul class="footer-links">
+          <li>學校地址：苗栗縣頭份市田寮里永貞路一段333號</li>
+          <li>指導班級：六年甲班全體學童</li>
+          <li><a href="#" class="open-pii-modal">個資安全脫敏檢驗報告</a></li>
+          <li><a href="https://swps.mlc.edu.tw/" target="_blank" rel="noopener">永貞國小官方學校首頁 ↗</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div class="footer-embed-bar">
+        <button class="footer-action-btn" id="copyShareUrlBtn">
+          <span>🔗 複製本展分享連結</span>
+        </button>
+        <button class="footer-action-btn" id="copyEmbedCodeBtn">
+          <span>🌐 複製 Google Sites 嵌入語法</span>
+        </button>
+      </div>
+      <p style="margin-top: 14px;">© 2026 苗栗縣頭份市永貞國民小學 學習成果展 ｜ 專案設計兼具教育美感、跨裝置 RWD 與個資隱私防護</p>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top -->
+  <button class="back-to-top" id="backToTopBtn" aria-label="返回頁首">↑</button>
+
+  <!-- Toast Notification -->
+  <div class="toast-notice" id="toastNotice" role="status" aria-live="polite">
+    <span class="toast-icon">✅</span>
+    <span class="toast-text" id="toastText">已複製到剪貼簿！</span>
+  </div>
+
+  <!-- Data and Application Script -->
+  <script src="js/activities-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
