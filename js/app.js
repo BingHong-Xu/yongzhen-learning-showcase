@@ -212,19 +212,26 @@ document.addEventListener('DOMContentLoaded', () => {
       `;
     }).join('');
 
-    // Attach card clicks
-    activitiesContainer.querySelectorAll('[data-act-id]').forEach(el => {
-      el.addEventListener('click', (e) => {
-        // If clicking a mini thumbnail, open lightbox directly at that photo!
-        if (el.classList.contains('mini-thumb')) {
+    // Attach full card clicks with touch-friendly delegation
+    activitiesContainer.querySelectorAll('.activity-card').forEach(card => {
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', (e) => {
+        // If clicking a mini thumbnail, open lightbox directly at that photo
+        const thumb = e.target.closest('.mini-thumb');
+        if (thumb) {
           e.stopPropagation();
-          const actId = el.dataset.actId;
-          const photoIdx = parseInt(el.dataset.photoIdx, 10);
+          const actId = thumb.dataset.actId;
+          const photoIdx = parseInt(thumb.dataset.photoIdx, 10);
           openLightbox(actId, photoIdx);
           return;
         }
 
-        const actId = el.dataset.actId;
+        // If clicking an SDG chip, let the chip listener handle it
+        if (e.target.closest('.sdg-chip')) {
+          return;
+        }
+
+        const actId = card.dataset.id;
         openActivityModal(actId);
       });
     });
@@ -253,13 +260,15 @@ document.addEventListener('DOMContentLoaded', () => {
     activitiesContainer.innerHTML = sorted.map((act, idx) => {
       const catClass = `cat-${act.category}`;
       const sdgChipsHtml = act.sdgs.map(s => `
-        <span class="sdg-chip" style="background-color: ${s.color};">SDG ${s.num}</span>
+        <span class="sdg-chip" data-sdg="${s.num}" style="background-color: ${s.color}; cursor: pointer;" title="點擊依此指標篩選：SDG ${s.num}">
+          SDG ${s.num}
+        </span>
       `).join('');
 
       return `
         <div class="timeline-item">
           <div class="timeline-marker">${idx + 1}</div>
-          <div class="timeline-card">
+          <div class="timeline-card" data-act-id="${act.id}" style="cursor: pointer;">
             <div class="timeline-header">
               <span class="category-tag ${catClass}">${act.categoryName}</span>
               <span class="timeline-date">${act.dateDisplay}</span>
@@ -274,7 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
                    style="width: 140px; height: 90px; object-fit: cover; border-radius: 10px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" 
                    data-act-id="${act.id}" />
               <div style="flex: 1; min-width: 220px;">
-                <div style="margin-bottom: 10px;">${sdgChipsHtml}</div>
+                <div style="margin-bottom: 10px; display: flex; flex-wrap: wrap; gap: 6px;">${sdgChipsHtml}</div>
                 <div style="font-size: 0.84rem; color: #1e3a8a; font-weight: 700;">✨ ${act.badge}</div>
               </div>
             </div>
@@ -289,10 +298,22 @@ document.addEventListener('DOMContentLoaded', () => {
       `;
     }).join('');
 
-    // Attach clicks
-    activitiesContainer.querySelectorAll('[data-act-id]').forEach(el => {
-      el.addEventListener('click', () => {
-        openActivityModal(el.dataset.actId);
+    // Attach clicks with touch-friendly delegation
+    activitiesContainer.querySelectorAll('.timeline-card').forEach(card => {
+      card.addEventListener('click', (e) => {
+        if (e.target.closest('.sdg-chip')) return;
+        openActivityModal(card.dataset.actId);
+      });
+    });
+
+    activitiesContainer.querySelectorAll('.sdg-chip[data-sdg]').forEach(chip => {
+      chip.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const sdgNum = parseInt(chip.dataset.sdg, 10);
+        currentSdgFilter = sdgNum;
+        currentCategory = 'all';
+        filterBtns.forEach(b => b.classList.toggle('active', b.dataset.cat === 'all'));
+        renderExhibition();
       });
     });
   }

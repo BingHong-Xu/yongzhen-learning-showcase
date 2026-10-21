@@ -230,12 +230,16 @@ a {
 }
 
 .nav-link {
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: var(--text-muted);
-  padding: 6px 4px;
+  padding: 8px 8px;
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
   position: relative;
   white-space: nowrap;
+  touch-action: manipulation;
 }
 
 .nav-link:hover {
@@ -268,8 +272,10 @@ a {
 /* Mobile Menu Toggle Button */
 .mobile-menu-btn {
   display: none;
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
   border-radius: var(--radius-sm);
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
@@ -282,6 +288,7 @@ a {
   transition: var(--transition-fast);
   z-index: 105;
   box-shadow: var(--shadow-xs);
+  touch-action: manipulation;
 }
 
 .mobile-menu-btn:hover, .mobile-menu-btn:active {
@@ -1136,15 +1143,15 @@ a {
 
 .search-box input {
   width: 100%;
-  padding: 9px 14px 9px 36px;
+  padding: 10px 14px 10px 38px;
   border-radius: var(--radius-full);
   border: 1px solid var(--border-subtle);
   background: var(--bg-card);
-  font-size: 0.88rem;
+  font-size: 0.95rem;
   color: var(--text-main);
   outline: none;
   transition: var(--transition-fast);
-  min-height: 40px;
+  min-height: 42px;
 }
 
 .search-box input:focus {
@@ -1195,8 +1202,9 @@ a {
   align-items: center;
   gap: 6px;
   white-space: nowrap;
-  min-height: 38px;
+  min-height: 40px;
   cursor: pointer;
+  touch-action: manipulation;
 }
 
 .view-btn.active {
@@ -1205,49 +1213,105 @@ a {
   box-shadow: 0 2px 8px rgba(30, 64, 175, 0.25);
 }
 
-@media (max-width: 768px) {
+/* Tablet Layout (641px - 1024px) */
+@media (min-width: 641px) and (max-width: 1024px) {
   .toolbar-section {
-    top: 60px;
+    top: 72px;
     padding: 10px 0;
     margin-bottom: 20px;
   }
   .toolbar-inner {
     flex-direction: column;
     align-items: stretch;
-    gap: 10px;
+    gap: 12px;
+  }
+  .filter-group {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 2px;
+  }
+  .search-and-view {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .search-box {
+    flex: 1;
+    max-width: 380px;
+  }
+  .search-box input {
+    font-size: 16px !important;
+    min-height: 44px;
+  }
+  .view-toggle-group {
+    flex-shrink: 0;
+  }
+  .view-btn {
+    min-height: 42px;
+    padding: 8px 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .toolbar-section {
+    top: 60px;
+  }
+}
+
+/* Mobile Layout (<= 640px) */
+@media (max-width: 640px) {
+  .toolbar-section {
+    top: 60px;
+    padding: 8px 0;
+    margin-bottom: 16px;
+  }
+  .toolbar-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
   }
   .filter-group {
     width: 100%;
     scroll-snap-type: x mandatory;
-    padding: 4px 2px;
+    padding: 3px 2px;
+    gap: 6px;
+    -webkit-overflow-scrolling: touch;
   }
   .filter-btn {
     scroll-snap-align: start;
-    padding: 7px 14px;
-    font-size: 0.82rem;
-    min-height: 38px;
+    padding: 8px 14px;
+    font-size: 0.84rem;
+    min-height: 40px;
+    touch-action: manipulation;
   }
   .search-and-view {
     width: 100%;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
   }
   .search-box {
     width: 100%;
   }
   .search-box input {
-    min-height: 42px;
+    min-height: 44px;
+    font-size: 16px !important; /* Critical: stops iOS Safari auto-zoom on focus */
   }
   .view-toggle-group {
     width: 100%;
     display: flex;
+    padding: 3px;
   }
   .view-btn {
     flex: 1;
     justify-content: center;
-    padding: 8px 6px;
+    padding: 8px 4px;
     font-size: 0.82rem;
-    min-height: 40px;
+    min-height: 42px;
+    touch-action: manipulation;
   }
 }
 
@@ -1474,14 +1538,17 @@ a {
 .sdg-chip {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  padding: 2px 8px;
-  border-radius: var(--radius-xs);
-  font-size: 0.72rem;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem;
   font-weight: 800;
   color: #fff;
-  line-height: 1.4;
+  line-height: 1.35;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  min-height: 28px;
+  touch-action: manipulation;
+  user-select: none;
 }
 
 /* Mini Thumbnails Strip */
@@ -1493,6 +1560,10 @@ a {
   border-top: 1px solid var(--border-subtle);
   overflow-x: auto;
   scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
 }
 
 .card-thumbs-strip::-webkit-scrollbar {
@@ -1500,14 +1571,18 @@ a {
 }
 
 .mini-thumb {
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  min-height: 50px;
   border-radius: var(--radius-xs);
   object-fit: cover;
   flex-shrink: 0;
   cursor: pointer;
   border: 1px solid var(--border-subtle);
   transition: var(--transition-fast);
+  scroll-snap-align: start;
+  touch-action: manipulation;
 }
 
 .mini-thumb:hover {
@@ -1528,7 +1603,7 @@ a {
   color: #1e3a8a;
   font-weight: 700;
   background: #f0fdf4;
-  padding: 3px 8px;
+  padding: 4px 10px;
   border-radius: var(--radius-xs);
   border: 1px solid #dcfce7;
 }
@@ -1537,15 +1612,17 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 0.86rem;
+  font-size: 0.88rem;
   font-weight: 700;
   color: var(--primary-royal);
   background: #f0f7ff;
   border: 1px solid #dbeafe;
-  padding: 6px 14px;
+  padding: 8px 16px;
   border-radius: var(--radius-full);
   transition: var(--transition-fast);
-  min-height: 36px;
+  min-height: 42px;
+  cursor: pointer;
+  touch-action: manipulation;
 }
 
 .btn-card-explore:hover, .btn-card-explore:active {
@@ -2045,11 +2122,14 @@ a {
     margin: 0 !important;
   }
   .modal-close-btn {
-    top: 12px;
-    right: 12px;
-    width: 42px;
-    height: 42px;
+    top: max(12px, env(safe-area-inset-top));
+    right: max(12px, env(safe-area-inset-right));
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
     font-size: 22px;
+    touch-action: manipulation;
   }
   .modal-hero {
     height: 220px;
@@ -2084,6 +2164,25 @@ a {
   .modal-photos-grid {
     grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
     gap: 8px;
+  }
+}
+
+@media (max-height: 520px) and (orientation: landscape) {
+  .modal-hero {
+    height: 140px;
+  }
+  .modal-hero-title {
+    font-size: 1.15rem;
+  }
+  .modal-body {
+    padding: 14px 16px;
+  }
+  .lightbox-main {
+    padding: 4px;
+  }
+  .lightbox-img-wrapper,
+  .lightbox-img {
+    max-height: 72vh;
   }
 }
 
@@ -2658,7 +2757,7 @@ a {
 /* Toast Notice */
 .toast-notice {
   position: fixed;
-  bottom: 30px;
+  bottom: max(24px, env(safe-area-inset-bottom, 24px));
   left: 50%;
   transform: translateX(-50%) translateY(100px);
   background: rgba(15, 23, 42, 0.95);
@@ -2672,11 +2771,14 @@ a {
   font-weight: 700;
   display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   gap: 8px;
   z-index: 9999;
   opacity: 0;
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
   pointer-events: none;
+  max-width: 90vw;
 }
 
 .toast-notice.show {
@@ -2695,13 +2797,28 @@ a {
   filter: brightness(1.1);
 }
 
+@media (max-width: 640px) {
+  .sdg-chip {
+    padding: 5px 11px;
+    font-size: 0.8rem;
+    min-height: 32px;
+  }
+  .card-body {
+    padding: 18px 15px;
+  }
+  .gallery-photo-caption {
+    padding: 8px 10px;
+    font-size: 0.78rem;
+  }
+}
+
 /* ==========================================================================
    Floating Back-to-Top Button
    ========================================================================== */
 .back-to-top {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  bottom: max(24px, env(safe-area-inset-bottom, 24px));
+  right: max(24px, env(safe-area-inset-right, 24px));
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -2717,6 +2834,7 @@ a {
   visibility: hidden;
   transition: var(--transition-normal);
   z-index: 80;
+  touch-action: manipulation;
 }
 
 .back-to-top.show {
@@ -2732,11 +2850,11 @@ a {
 
 @media (max-width: 640px) {
   .back-to-top {
-    bottom: 18px;
-    right: 18px;
-    width: 42px;
-    height: 42px;
-    font-size: 16px;
+    bottom: max(18px, env(safe-area-inset-bottom, 18px));
+    right: max(18px, env(safe-area-inset-right, 18px));
+    width: 46px;
+    height: 46px;
+    font-size: 18px;
   }
 }
 
